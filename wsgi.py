@@ -14,7 +14,7 @@ application = Flask(__name__)
 def hello():
     return "Hello Dan!"
 
-@application.roubt("/pme")
+@application.route("/pme")
 def pme():
     x = requests.get('https://postman-echo.com/get?foo1=bar1&foo2=bar2')
     return x.json()
