@@ -16,7 +16,8 @@ def hello():
 
 @application.route("/pme")
 def pme():
-    x = requests.get('https://postman-echo.com/get?foo1=bar1&foo2=bar2')
+    #x = requests.get('https://postman-echo.com/get?foo1=bar1&foo2=bar2')
+    x = requests.get('https://external-postman-echo.myproject.svc/get?foo1=bar1&foo2=bar2')
     return jsonify(x.json())
 
 if __name__ == "__main__":
