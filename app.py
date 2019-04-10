@@ -6,6 +6,7 @@ for k in os.environ:
 import http.server
 
 addr = (os.environ['DAN_PYTHON_TEST_SERVICE_HOST'], int(os.environ['DAN_PYTHON_TEST_SERVICE_PORT']))
+addr = (os.environ['DAN_PYTHON_TEST_SERVICE_HOST'], 8000)
 
 print('Address', addr)
 
