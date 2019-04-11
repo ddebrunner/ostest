@@ -20,6 +20,11 @@ def pme():
     #x = requests.get('https://external-postman-echo.myproject.svc/get?foo1=bar1&foo2=bar2')
     return jsonify(x.json())
 
+@application.route("/strms")
+def strms():
+    x = requests.get('http://dan-nginx-tonic.myproject.svc:8080/streams/rest/instances', auth=(os.environ['DS_STRMS_USER'],os.environ['DS_STRMS_PWD']))
+    return jsonify(x.json())
+
 if __name__ == "__main__":
     application.run()
 
