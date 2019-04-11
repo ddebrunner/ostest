@@ -22,7 +22,7 @@ def pme():
 
 @application.route("/strms")
 def strms():
-    x = requests.get('http://dan-nginx-tonic.myproject.svc:8080/streams/rest/instances', auth=(os.environ['DS_STRMS_USER'],os.environ['DS_STRMS_PWD']))
+    x = requests.get('http://dan-nginx-tonic.myproject.svc:8080/streams/rest/instances', auth=(os.environ['DAN_STRMS_USER'],os.environ['DAN_STRMS_PWD']))
     return jsonify(x.json())
 
 if __name__ == "__main__":
